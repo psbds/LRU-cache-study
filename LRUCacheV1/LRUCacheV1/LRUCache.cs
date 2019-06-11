@@ -75,7 +75,7 @@ namespace LRUCacheV1
                     newItem.last = oldOldest.last;
                     newItem.next = oldNewest;
                     oldOldest.last.next = Newest;
-
+                    oldNewest.last = Newest;
                     Oldest = oldOldest.last;
 
                     var index = Array.IndexOf(_items, oldOldest);
